@@ -52,10 +52,20 @@ class Application(Frame):
         self.orders_to_go["command"] = self.say_ToGo
         self.orders_to_go.pack(side="bottom")
 
+
+        self.orders_at_bar = Button(self)
         self.orders_at_bar["text"] = "Orders at Bar"
-        self.orders_at_bar["command"] = self.say_ToGo
+        self.orders_at_bar["command"] = self.say_Bar
         self.orders_at_bar.pack(side="bottom")
 
+
+        self.table11 = Button(self)
+        self.table11["text"] = "Table 11"
+        self.table11.pack(side="left")
+
+        self.table12 = Button(self)
+        self.table12["text"] = "Table 12"
+        self.table12.pack(side="left")
 
     def say_ToGo(self):
         print("to go Order")
